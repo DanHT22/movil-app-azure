@@ -1,0 +1,195 @@
+:root {
+  /* Tipografía y colores base */
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #ffffff;
+  background-color: #1a1a2e;
+
+  --primary-color: #ff6f61; /* Color exótico principal */
+  --secondary-color: #ffd700; /* Amarillo brillante */
+  --background-color: #1a1a2e; /* Fondo oscuro */
+  --text-color: #ffffff; /* Texto claro */
+  --link-color: #00d4ff; /* Azul vibrante */
+  --button-hover: #ff9a8b; /* Color de hover para botones */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilo general */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #1a1a2e;
+  color: #ffffff;
+}
+
+/* Enlaces */
+a {
+  font-weight: 500;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Encabezado */
+header {
+  background-color: #ff6f61; /* Color exótico */
+  color: #ffffff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.logo img {
+  width: 100px; /* Ajusta el tamaño del logo */
+  height: auto;
+}
+
+
+/* Sección principal */
+/* Contenido principal */
+main {
+  flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+}
+
+main .hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+main .hero h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+main .hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: var(--text-color);
+}
+
+main .hero .actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+main .hero .actions button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+main .hero .actions button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Contenedor del juego */
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  height: 300px; /* Ajusta la altura según el espacio disponible */
+  background-color: #1a1a2e; /* Fondo oscuro */
+  border-radius: 10px;
+}
+
+#gameCanvas {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Pie de página */
+footer {
+  background-color: #ffd700; /* Amarillo brillante */
+  color: #1a1a2e;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer ul li a {
+  color: var(--background-color);
+  font-weight: bold;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  main .hero h2 {
+    font-size: 2rem;
+  }
+
+  main .hero p {
+    font-size: 1rem;
+  }
+
+  main .hero .actions {
+    flex-direction: column;
+  }
+}
